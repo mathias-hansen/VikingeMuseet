@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="admin_AdminMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../css/resetcss.css" rel="stylesheet" />
+    <link href="../css/vikingadminstyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>
+        <div class="wrapper">
+            <div class="header">
+                <a href="../Default.aspx">Tilbage til brugerflade</a>
+            </div>
+            <div class="content">
+                <div class="AdminMenu">
+                    <ul>
+                        <li><a href="editdisplay.aspx">Rediger udstillinger</a></li>
+                        <li><a href="editcontact.aspx">Ret kontaktoplysninger</a></li>
+                        <li><a href="editfrontpage.aspx">Ret forsidetekst</a></li>
+                        <li><a href="#">Opret ny admin</a></li>
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="footer">
+                
+            </div>
+        </div>
+    </form>
+</body>
+</html>
