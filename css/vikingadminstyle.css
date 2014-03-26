@@ -30,3 +30,33 @@ a
     {text-decoration:none; color:#000; font-size:22px;}
     .AdminMenu ul li a:hover
     {text-decoration:underline; color:#808080;}
+
+.displaytabcontainer 
+{width:95%; height:400px;}
+    .displaytabcontainer .ajax__tab_tab 
+    {width:200px; height:30px; margin:0 40px; font-size:20px; background-color:#212121; color:#d0d0d0; line-height:30px; border:1px solid #000;}
+    .displaytabcontainer .ajax__tab_body 
+    {padding:25px 75px;}
+
+.maindisplaypnl h3
+{margin:0 25% 0 25%; padding-top:15px;}
+.maintext 
+{width:25%; margin:0 25% 0 25%;}
+.mainmultilinetext
+{width:50%; height:100px; margin:0 25% 0 25%;}
+.mainsavebtn 
+{width:130px; height:30px; margin:0 25% 0 25%; padding:4px; border:none; background:#212121; color:#d0d0d0; font-size:18px;}
+
+.multilinetext 
+{width:50%; height:100px;}
+.savebtn 
+{border-style: none; border-color: inherit; border-width: medium; padding: 2px; background: #212121; color:#d0d0d0; }
+
+.ajax__fileupload 
+{width:70%; margin:25px 0;}
+    .ajax__fileupload_selectFileButton
+    {display:block; width:80px; height:24px; line-height:24px; text-align:center; background-color:#212121; color:#d0d0d0; font-size:13px;}
+    #ContentPlaceHolder1_tctCreateNewDisplay_tplIMG_afuUploadNewDisplayIMG_FileStatusContainer
+    {position:relative; left:90px;}
+    .ajax__fileupload_uploadbutton 
+    {width:60px; text-align:center; background-color:#212121 !important; color:#d0d0d0 !important; font-weight:bold;}
