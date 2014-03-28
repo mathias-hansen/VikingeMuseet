@@ -20,6 +20,7 @@ public class DisplayFac
     public int _LeftRight { get; set; }
     public int _DisplayID { get; set; }
 
+    public DataRow _DisplayIDRow { get; set; }
 
     public void InsertNewDisplay() 
     {
@@ -56,6 +57,26 @@ public class DisplayFac
         CMD.Parameters.AddWithValue("@leftright", _LeftRight);
         CMD.Parameters.AddWithValue("@displayid", _DisplayID);
         DA.ModifyData(CMD);
+    }
+
+    public DataTable GetAllDisplays() 
+    {
+        CMD = new SqlCommand("SELECT fldUdstillingID, fldUdstillingOverskrift, fldUdstillingTekst FROM VtblUdstilling");
+        return DA.GetData(CMD);
+    }
+
+    public DataTable GetDisplayIMG() 
+    {
+        CMD = new SqlCommand("SELECT TOP 1 fldIndholdIMG FROM VtblUdstillingIndholdIMG WHERE fldUdstillingID_FK = @displayid");
+        CMD.Parameters.AddWithValue("@displayid", _DisplayIDRow["fldUdstillingID"]);
+        return DA.GetData(CMD);
+    }
+
+    public DataTable GetDisplayByID()
+    {
+        CMD = new SqlCommand("SELECT fldUdstillingID, fldUdstillingOverskrift, fldUdstillingTekst FROM VtblUdstilling WHERE fldUdstillingID = @displayid");
+        CMD.Parameters.AddWithValue("@displayid", _DisplayID);
+        return DA.GetData(CMD);
     }
 
     public DataTable GetNewestDisplay() 

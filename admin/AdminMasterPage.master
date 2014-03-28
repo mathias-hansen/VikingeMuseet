@@ -14,7 +14,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>
         <div class="wrapper">
             <div class="header">
                 <a href="../Default.aspx">Tilbage til brugerflade</a>
@@ -28,6 +27,7 @@
                         <li><a href="#">Opret ny admin</a></li>
                     </ul>
                 </div>
+                <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
